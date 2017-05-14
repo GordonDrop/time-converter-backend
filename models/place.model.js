@@ -5,6 +5,26 @@ const ADRESS_COMPONENTS = {
   country: 'country'
 };
 
+/**
+ * Example data:
+ * {
+ *   location: {
+ *      lat: 55.755826,
+ *      lng: 37.6173
+ * },
+ * city: "Moscow",
+ * country: "Russia",
+ * timezone: {
+ *    dstOffset: 0,
+ *    rawOffset: 10800, // utc_offset
+ *    timeZoneId: "Europe/Moscow",
+ *    timeZoneName: "Moscow Standard Time"
+ *    }
+ * }
+ *
+ * @type {{search: ((params))}}
+ */
+
 class Place {
   constructor(placeObj) {
     this.location = placeObj.geometry.location;
