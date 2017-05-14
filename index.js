@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const config = require('./config');
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -10,6 +11,6 @@ app.use(function(req, res, next) {
 
 require('./router')(app);
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
+app.listen(config.PORT, () => {
+  console.log(`Example app listening on port! ${config.PORT}`);
 });
