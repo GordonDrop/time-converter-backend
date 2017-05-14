@@ -9,16 +9,16 @@ module.exports = function(app) {
     res.send(tzService.search(params))
   });
 
-  // GET list of locations by names
+  // GET list of locations by timezoneId
   app.get('/api/locations', (req, res) => {
     // TODO: real array
-    let locationsList = req.query.q.replace('+', ' ').split(',');
+    let locationsList = req.query.q;
 
     placesService.locationsByTimezone(locationsList)
       .then(locations => res.send(locations));
   });
 
-  // GET search location by timezoneId
+  // GET search location by cities
   // return list PlacesModels{json}
   app.get('/api/locations-search', (req, res) => {
     return placesService.locationsSearch(req.query)

@@ -2,7 +2,8 @@ const config = require('../config');
 const googleMaps = require('@google/maps');
 const googleClient = googleMaps.createClient({
   Promise: Promise,
-  key: config.GOOGLE_API_KEY
+  key: 'AIzaSyAFButWzd8qeMhxaOjly4FFrMFyUmzrbt4'
+  // key: config.GOOGLE_API_KEY
 });
 const _ = require('lodash');
 const PlaceModel = require('../models/place.model');
