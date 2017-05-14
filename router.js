@@ -18,7 +18,7 @@ module.exports = function(app) {
       .then(locations => res.send(locations));
   });
 
-  // GET search location by name of city
+  // GET search location by timezoneId
   // return list PlacesModels{json}
   app.get('/api/locations-search', (req, res) => {
     return placesService.locationsSearch(req.query)

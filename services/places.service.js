@@ -74,7 +74,4 @@ function firstRelativeLocation(timezoneName) {
 
 }
 
-PlacesService.locationsByTimezone(['Asia/Omsk', 'Europe/London'])
-  .then(console.log);
-
 module.exports = PlacesService;
