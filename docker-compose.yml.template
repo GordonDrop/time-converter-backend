@@ -1,0 +1,10 @@
+timeconverter-server:
+  image: node
+  working_dir: /home/build
+  command: bash -c "npm i && npm run serve"
+  volumes:
+    - ./:/home/build
+  ports:
+     - "5000:5000"
+  environment:
+    - NODE_ENV=dev
